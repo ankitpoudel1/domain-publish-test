@@ -33,6 +33,17 @@
 </head>
 
 <body>
+    <style>
+        .owl-carousel .item {
+          width: 100%;
+          /* height: 90vh; */
+        }
+        .owl-carousel .item img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+    </style>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -348,6 +359,24 @@
     </div>
     <!-- Service End -->
 
+       <!-- Portfolio Start -->
+       <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Portfolio</h1>
+            </div>
+            <div class="row g-4">
+                <div class="owl-carousel">
+                    <div class="item"><img src="img/portfolioo_1.jpeg" alt="Image 1"></div>
+                    <div class="item"><img src="img/portfolioo_2.jpeg" alt="Image 2"></div>
+                    <div class="item"><img src="img/portfolioo_3.jpeg" alt="Image 3"></div>
+                    <!-- Add more items as needed -->
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
 
 
 
@@ -598,6 +627,19 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            dots: true
+          });
+        });
+      </script>
 </body>
 
 </html>
